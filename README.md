@@ -11,3 +11,6 @@ save and update their own Turing machines for various problems.
 
 Technologies used: MERN Stack: MongoDB, Express, React, NodeJS
 
+Team : 
+    Noble Austine
+    Omal S.
