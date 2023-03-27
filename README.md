@@ -9,3 +9,5 @@ Turing Machines. We plan to implement a website so that users can create an
 account after which a platform will be provided for them where they can create,
 save and update their own Turing machines for various problems.
 
+Technologies used: MERN Stack: MongoDB, Express, React, NodeJS
+
