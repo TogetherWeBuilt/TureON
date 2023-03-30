@@ -33,8 +33,9 @@ const Navbar= ({ toggle }) => {
             </MobileIcon>
             <NavMenu>
 
+               
                <NavItem>
-                <NavLinks to='types'
+                <NavLinks to='overview'
                 smooth={true} 
                 duration={500} 
                 spy={true}
@@ -43,32 +44,24 @@ const Navbar= ({ toggle }) => {
                >Overview</NavLinks>
                </NavItem>
                <NavItem>
-                <NavLinks to='Overview'
+                <NavLinks to='features'
                 smooth={true} 
                 duration={500} 
                 spy={true}
                 exact='true'  
                 offset={-80}
-               >Visualisation</NavLinks>
+               >Features</NavLinks>
                </NavItem>
                <NavItem>
-                <NavLinks to='/Footer'
+                <NavLinks to='footer'
                 smooth={true} 
                 duration={500} 
                 spy={true}
                 exact='true'  
-                offset={-80}
-               >Contacts</NavLinks>
-               </NavItem>
-               <NavItem>
-                <NavLinks to='/Footer'
-                smooth={true} 
-                duration={500} 
-                spy={true}
-                exact='true'  
-                offset={-80}
+                offset={-10}
                >About</NavLinks>
                </NavItem>
+               
             </NavMenu>
             <NavBtn>
               <NavBtnLink to='/signin'>Sign In</NavBtnLink>
@@ -100,4 +93,14 @@ export default Navbar;
                 exact='true'  
                 offset={-80}
                >Benefit</NavLinks>
-               </NavItem> */
+               </NavItem> 
+               
+               <NavItem>
+                <NavLinks to='/Footer'
+                smooth={true} 
+                duration={500} 
+                spy={true}
+                exact='true'  
+                offset={-80}
+               >About</NavLinks>
+               </NavItem>*/

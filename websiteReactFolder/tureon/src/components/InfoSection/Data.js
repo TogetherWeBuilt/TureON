@@ -21,7 +21,7 @@ import Image2 from '../../images/turingMachine.svg';
 //} ;
 
 export const homeObjTwo = {
-    id:'benefits',
+    id:'overview',
     lightBg: true,
     lightText: true,
     lightTextDesc: false,

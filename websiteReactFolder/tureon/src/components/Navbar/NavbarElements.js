@@ -109,6 +109,6 @@ export const MobileIcon = styled.div`
     &:hover{
       transition: all 0,2s ease-in-out;
       background: #fff;
-      color: ##7F00FF;
+      color: #7F00FF;
     }
    `
