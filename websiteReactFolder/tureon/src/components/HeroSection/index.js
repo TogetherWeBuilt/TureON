@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import Video from '../../videos/video.mp4';
+// import Video from '../../videos/video.mp4';
 import {Button} from '../ButtonElement';
-import { HeroContainer, HeroBg, VideoBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, HeroBtnLink} from './HeroElements';
+import { HeroContainer, HeroBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, HeroBtnLink} from './HeroElements';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -15,7 +15,7 @@ const HeroSection = () => {
   
         <HeroContainer id='home' >
            <HeroBg>
-            <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
+            {/* <VideoBg autoPlay loop muted src={Video} type='video/mp4'/> */}
            </HeroBg>
            <HeroContent>
             <HeroH1>Turing Machine Visualisation</HeroH1>
