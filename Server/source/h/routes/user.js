@@ -6,7 +6,7 @@ const userModel = require('../models/userModel.js');
 const router = express.Router();
 
 
-router.post('/users/signup',(req,res,next) => {
+router.post('/tureONian/signup',(req,res,next) => {
 
     userModel.find({username:req.body.username})
     .exec()
@@ -65,7 +65,7 @@ router.post('/users/signup',(req,res,next) => {
     
 });
 
-router.post('/users/login',(req,res,next) => {
+router.post('/tureONian/login',(req,res,next) => {
     userModel.find({username:req.body.username})
     .exec()
     .then(user=>{

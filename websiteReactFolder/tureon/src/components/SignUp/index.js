@@ -21,7 +21,7 @@ const postData = async(e) =>{
   e.preventDefault();
 
   const {username,email,password,confirmPassword}=user;
-  const res = await fetch("/users/signup",{
+  const res = await fetch("/tureONian/signup",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
