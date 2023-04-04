@@ -1,6 +1,1 @@
- https://bit.ly/CRA-deploy
-
- "proxy": "http://localhost:5000",
-
- "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix tureon && run run build -- prefix client"
-  },
+ 

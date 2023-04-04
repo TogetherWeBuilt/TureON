@@ -1,2 +1,4 @@
+
+# files to be ignored
 .env
 node_modules/
