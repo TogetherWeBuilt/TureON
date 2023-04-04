@@ -21,7 +21,7 @@ const postData = async(e) =>{
   e.preventDefault();
 
   const {username,email,password,confirmPassword}=user;
-  const res = await fetch("/tureONian/signup",{
+  const res = await fetch("/tureONian/register",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
@@ -32,12 +32,13 @@ const postData = async(e) =>{
 
   });
 const data = await res.json();
-if(res.status === 409 || ! data){
-  window.alert("Registration unsuccessful");
-  console.log("Registration unsuccessful......")
+if(res.status === 400){
+  window.alert(data.message);
+  console.log(data.message)
 }else{
-  window.alert("Registration successful");
-  console.log("Registration successful......")
+  window.alert(data.message);
+  console.log(data.message)
+  window.location.replace("./signin");
 
 }
 }

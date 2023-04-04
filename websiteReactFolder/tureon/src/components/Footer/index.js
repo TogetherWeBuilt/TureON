@@ -21,7 +21,7 @@ const Footer = () => {
                                 <FaGithubAlt/>
                         </SocialIconLink>
                     </SocialIcons>
-                            <FooterLink to = "https://github.com/nobleaustine">  - NOBLE AUSTIN</FooterLink>
+                            <FooterLink to = "https://github.com/nobleaustine">  - NOBLE AUSTINE</FooterLink>
                             <SocialIcons>
                         <SocialIconLink
                             href="https://github.com/nobleaustine" target="_blank" aria-label="Github">

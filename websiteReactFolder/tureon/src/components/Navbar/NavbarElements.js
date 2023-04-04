@@ -82,7 +82,7 @@ export const MobileIcon = styled.div`
     cursor: pointer;
 
     &.active { 
-      border-bottom: 5px solid #01bf71;
+      border-bottom: 5px solid #7F00FF;
     }
   `;
 
@@ -96,7 +96,7 @@ export const MobileIcon = styled.div`
 
    export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #7F00FF;
     white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
@@ -109,6 +109,6 @@ export const MobileIcon = styled.div`
     &:hover{
       transition: all 0,2s ease-in-out;
       background: #fff;
-      color: #01bf71;
+      color: #7F00FF;
     }
    `

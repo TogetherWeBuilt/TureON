@@ -33,13 +33,14 @@ const postData = async(e) =>{
 
   });
 const data = await res.json();
-if(res.status === 401 || ! data){
-  window.alert("Login unsuccessful");
-  console.log("Login unsuccessful......")
+if(res.status === 400 ){
+  window.alert(data.message);
+  console.log(data.message)
 }else{
+  window.alert(data.message);
+  console.log(data.message)
   window.location.replace("./home");
-  window.alert("Login successful");
-  console.log("Login successful......")
+ 
 
 }
 }
@@ -51,7 +52,7 @@ if(res.status === 401 || ! data){
          <FormContent>
           <Form action = "#">
             <FormH1>Sign in to your account</FormH1>
-            <FormLabel htmlFor='for'>Username</FormLabel>
+            <FormLabel htmlFor='for'>Email</FormLabel>
             <FormInput type='name' required 
                        name='username'
                        id="username"

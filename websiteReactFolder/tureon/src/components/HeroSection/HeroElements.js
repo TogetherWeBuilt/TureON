@@ -4,7 +4,7 @@ import{MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 
 export const HeroContainer = styled.div`
 //  background: #0c0c0c;
- background: #01bf71;
+ background: #7F00FF;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -46,7 +46,7 @@ export const VideoBg = styled.video`
  height: 100%;
  -o-object-fit: cover;
  object-fit: cover;
- background:  #01bf71;
+ background:  #7F00FF;
 `;
 
 export const HeroContent = styled.div`
@@ -106,7 +106,7 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 `
 export const HeroBtnLink = styled(LinkR)`
     border-radius: 50px;
-    //background: #01bf71;
+    //background: #7F00FF;
     //white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
@@ -119,7 +119,7 @@ export const HeroBtnLink = styled(LinkR)`
     &:hover{
       transition: all 0,2s ease-in-out;
       background: #fff;
-      color: #01bf71;
+      color: #7F00FF;
     }
    `
 
