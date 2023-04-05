@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
 let userSchema = mongoose.Schema({
-    
-    id: mongoose.Schema.Types.ObjectId,
+     
+    // no need of explicit
+    //_id: mongoose.Schema.Types.ObjectId,
 
     username: {
         type:String,

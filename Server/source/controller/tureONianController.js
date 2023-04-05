@@ -14,7 +14,7 @@ const register = asyncHandler(async (req,res) => {
             const usernameExsist = await tureONian.findOne({username});
             const emailidExsist = await tureONian.findOne({email});
 
-            if(usernameExsist && emailidExsist){
+            if(usernameExsist || emailidExsist){
                 res.status(400).json({ message: "another account exsist with the following details......"})
             }
             else{
@@ -33,7 +33,7 @@ const register = asyncHandler(async (req,res) => {
                 
                 if(user){
                     res.status(201).json({
-                        id:      user.id,
+                        _id:      user._id,
                         username:  user.username,
                         email:     user.email,
                         password:  user.password,
@@ -46,7 +46,8 @@ const register = asyncHandler(async (req,res) => {
             }
         }
 }catch(error){
-    res.status(400).json({ message: error})
+    console.log(error)
+    res.status(400).json({ message: "entha gava"})
 }
 
 });
@@ -57,17 +58,17 @@ const login = asyncHandler(async (req,res) =>{
         const userExsist = await tureONian.findOne({username})
         
         if(userExsist && (await bcrypt.compare(password,userExsist.password))){
-            console.log(userExsist);
+            
             const token = jwt.sign(
                 {
                     username:userExsist.username,
-                    id:userExsist.id
+                    _id:userExsist._id
                 },
                 process.env.KEY,
                 {
-                    expiresIn:".05h"
+                    expiresIn:".5h"
                 });
-                console.log(token)
+                
                 return res.status(200).json({
                 message:"Authentication successful you are logged in......",
                 token:token
@@ -82,6 +83,22 @@ const login = asyncHandler(async (req,res) =>{
         }
 })
 
-module.exports = {register,login}
+const getMe = asyncHandler(async (req,res) =>{
+
+    const {_id,username,email,name,gitId,about,image} = await tureONian.findById(req.user._id)
+    res.status(201).json({
+        _id,
+        username,
+        email,
+        name,
+        gitId,
+        about,
+        image
+
+
+    })
+})
+
+module.exports = {register,login,getMe}
 
 

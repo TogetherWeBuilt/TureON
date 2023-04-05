@@ -73,7 +73,7 @@ if(res.status === 400){
                         />
 
             <FormLabel htmlFor = 'for'>Confirm Password</FormLabel>
-            <FormInput type='conpassword' required
+            <FormInput type='password' required
                        name='confirmPassword'
                        value={user.confirmPassword}
                        onChange={handleInputs} 

@@ -4,7 +4,7 @@ import { BrowserRouter as Router ,Routes as Switch, Route} from 'react-router-do
 import SigninPage from './pages/signin';
 import SignUpPage from './pages/signup';
 import HomePage from './pages/home';
-import ProfilePage from './pages/profile';
+// import ProfilePage from './pages/profile';
 import BuildPage from './pages/build';
 
 import Home from './pages';
@@ -19,7 +19,7 @@ function App() {
         <Route path='/signin' element={<SigninPage/>} />
         <Route path='/signup' element={<SignUpPage/>} />
         <Route path='/home' element={<HomePage/>} />
-        <Route path='/profile' element={<ProfilePage/>} />
+        {/* <Route path='/profile' element={<ProfilePage/>} /> */}
         <Route path='/build' element={<BuildPage/>} />
       </Switch>
     </Router>
