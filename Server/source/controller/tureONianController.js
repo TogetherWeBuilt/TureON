@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const tureONian = require('../models/tureONianModel.js');
 const asyncHandler = require('express-async-handler')
 
+
 const register = asyncHandler(async (req,res) => {
     try{
         const {username,email,password} = req.body
@@ -47,7 +48,7 @@ const register = asyncHandler(async (req,res) => {
         }
 }catch(error){
     console.log(error)
-    res.status(400).json({ message: "entha gava"})
+    res.status(400).json({ message: "an error occured......"})
 }
 
 });

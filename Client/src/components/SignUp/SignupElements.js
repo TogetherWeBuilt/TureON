@@ -111,5 +111,12 @@ export const Text = styled.span`
   font-size: 14px;
 `;
 
+export const Div = styled.div`
+  padding: 16px 16px;
+  margin-bottom: 32px;
+  border: none;
+  border-radiu: 4px;
+`;
+
 
  
