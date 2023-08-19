@@ -12,9 +12,17 @@ const SignIn = () => {
   const schema = {
     username: Joi.string().min(6).max(20).required(),
     email: Joi.string().email().required(),
-    password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
-    confirmPassword: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()
-  };
+    password: Joi.string().min(8).max(21)
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 
+    'password').required(),
+  confirmPassword: Joi.string().required().valid(Joi.ref('password'))//.options({
+  //     language: {
+  //       any: {
+  //         allowOnly: '!!Passwords do not match',
+  //       }
+  //     } 
+  //   })
+   };
 
   const validateForm = (event) => {
     event.preventDefault();
@@ -108,57 +116,62 @@ if(res.status === 400){
           <Form action = "#">
             <FormH1>Create New Account</FormH1>
             <FormLabel htmlFor='for'>Username</FormLabel>
+
+            {errors.username && (
+           <Div className="alert alert-danger">
+            {errors.username}
+           </Div>)}
+
             <FormInput type='name' required 
                        name='username'
                        id="username"
                        value={user.username}
                        onChange={handleInputs}
                       />
-          {errors.username && (
-           <Div className="alert alert-danger">
-            {errors.username}
+
+            <FormLabel htmlFor='for'>Email</FormLabel>
+
+            {errors.email && (
+          <Div className="alert alert-danger">
+            {errors.email}
           </Div>
            )}
 
-            <FormLabel htmlFor='for'>Email</FormLabel>
             <FormInput type='email' required
                        name='email'
                        value={user.email}
                        onChange={handleInputs}
                        />
 
-        {errors.email && (
+            <FormLabel htmlFor = 'for'>Password</FormLabel>
+
+            {errors.password && (
           <Div className="alert alert-danger">
-            {errors.email}
+            {errors.password}
           </Div>
            )}
 
-            <FormLabel htmlFor = 'for'>Password</FormLabel>
             <FormInput type='password' required 
                         name='password'
                         value={user.password}
                         onChange={handleInputs}
                         />
 
-         {errors.password && (
+
+            <FormLabel htmlFor = 'for'>Confirm Password</FormLabel>
+
+            {errors.confirmPassword && (
           <Div className="alert alert-danger">
-            {errors.password}
+            {errors.confirmPassword}
           </Div>
            )}
 
-
-            <FormLabel htmlFor = 'for'>Confirm Password</FormLabel>
             <FormInput type='password' required
                        name='confirmPassword'
                        value={user.confirmPassword}
                        onChange={handleInputs} 
                        />
             
-            {errors.confirmPassword && (
-          <Div className="alert alert-danger">
-            {errors.confirmPassword}
-          </Div>
-           )}
 
             <FormButton type='submit' onClick={postData}>Sign Up</FormButton>
             <Text>Forgot password</Text>
