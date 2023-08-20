@@ -17,10 +17,10 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems, secondaryListItems } from './ListItems/ListItems';
-import Chart from './Chart/Chart';
-import Deposits from './Deposits/Deposits';
-import Orders from './Orders/Orders';
+import { mainListItems, secondaryListItems } from './ListItems';
+import Chart from './Chart';
+import Deposits from './Deposits';
+import Orders from './Files';
 
 function Copyright(props: any) {
   return (
@@ -123,7 +123,7 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              HOME
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -168,7 +168,7 @@ export default function Dashboard() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12} md={4} lg={3}>
                 <Paper
                   sx={{
                     p: 2,

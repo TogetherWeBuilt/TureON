@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, FormWrap, Icon, MyProjectH1} from './MyProjectElements'
+import { Container, FormWrap, Icon, ProfileH1} from './Profile'
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
      <Container>
         <FormWrap>
          <Icon to="/home"> TureON</Icon>
-         <MyProjectH1>My Projects</MyProjectH1>
+         <ProfileH1>Profile</ProfileH1>
         </FormWrap>
      </Container>
     </>

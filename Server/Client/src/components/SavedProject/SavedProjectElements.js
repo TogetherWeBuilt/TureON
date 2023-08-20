@@ -46,3 +46,16 @@ export const Icon = styled(Link)`
     margin-top: 8px;
   }
 `
+export const SavedProjectH1 = styled.h1`
+ color: #fff;
+ font-size: 65px;
+ text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 480px){
+    font-size: 32px;
+  }
+ `

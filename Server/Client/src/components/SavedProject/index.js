@@ -1,13 +1,13 @@
 import React from 'react'
-import { Container, FormWrap, Icon} from './SavedProjectElements'
+import { Container, FormWrap, Icon, SavedProjectH1} from './SavedProjectElements'
 
 const Home = () => {
   return (
     <>
      <Container>
         <FormWrap>
-         <Icon to="/"> TureON</Icon>
-         <HomeH1>Saved Projects</HomeH1>
+         <Icon to="/home"> TureON</Icon>
+         <SavedProjectH1>Saved Projects</SavedProjectH1>
         </FormWrap>
      </Container>
     </>

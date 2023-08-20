@@ -46,8 +46,7 @@ export const Icon = styled(Link)`
     margin-top: 8px;
   }
 `
-
-export const HomeH1 = styled.h1`
+export const ProfileH1 = styled.h1`
  color: #fff;
  font-size: 65px;
  text-align: center;
