@@ -6,7 +6,6 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
-import Typography from '@mui/material/Typography';
 
 // Generate Order Data
 function createData(id, date, name, shipTo, paymentMethod, amount) {
@@ -79,11 +78,14 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
-      <Link color="#01bf71" href="./cm" onClick={preventDefault} sx={{ mt: 3 }} >
+      <Link color="#01bf71
       
+      
+      
+      
+      " href="#" onClick={preventDefault} sx={{ mt: 3 }}>
         See more orders
       </Link>
-     
     </React.Fragment>
   );
 }

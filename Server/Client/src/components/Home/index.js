@@ -94,10 +94,11 @@ export default function Dashboard() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} backgroundColor= "#212121">
           <Toolbar
             sx={{
-              pr: '24px', // keep right padding when drawer closed
+              pr: '24px',
+              backgroundColor: "#212121" // keep right padding when drawer closed
             }}
           >
             <IconButton
@@ -115,48 +116,49 @@ export default function Dashboard() {
             <Typography
               component="h1"
               variant="h6"
-              color="inherit"
+              color="#ffff"
               noWrap
               sx={{ flexGrow: 1 }}
+              
             >
-              HOME<IconButton onClick={toggleDrawer}>
+             HOME<IconButton onClick={toggleDrawer} color='#fff'
+              >
               {/* <ChevronLeftIcon /> */}
             </IconButton>
             </Typography>
             <IconButton color="inherit" >
-              {/* <Badge badgeContent={4} color="primary">
+              {/* <Badge badgeContent={4} color="#01bf71">
               </Badge> */}
               <NotificationsIcon />
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
+        <Drawer variant="permanent" open={open} color = "#fff">
           <Toolbar
             sx={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'flex-end',
               px: [1],
+              backgroundColor: "#212121",
             }}
           >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
+            <IconButton onClick={toggleDrawer}  >
+              <ChevronLeftIcon color='success'  />
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component="nav">
+          <List component="nav" color = "#212121" >
             {mainListItems}
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 1 ,
+            backgroundColor: "#212121",}} />
             {secondaryListItems}
           </List>
         </Drawer>
         <Box
           component="main"
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: "#01bf71",
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
@@ -173,9 +175,11 @@ export default function Dashboard() {
                     display: 'flex',
                     flexDirection: 'column',
                     height: 240,
+
                   }}
                 >
                   {/* <Chart /> */}
+                  <Deposits />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -188,7 +192,7 @@ export default function Dashboard() {
                     height: 240,
                   }}
                 >
-                  {/* <Deposits /> */}
+                  <Deposits />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
@@ -212,7 +216,7 @@ export default function Dashboard() {
                     height: 240,
                   }}
                 >
-                  {/* <Deposits /> */}
+                  <Deposits />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
@@ -236,7 +240,7 @@ export default function Dashboard() {
                     height: 240,
                   }}
                 >
-                  {/* <Deposits /> */}
+                  <Deposits />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
@@ -260,7 +264,7 @@ export default function Dashboard() {
                     height: 240,
                   }}
                 >
-                  {/* <Deposits /> */}
+                  <Deposits />
                 </Paper>
               </Grid>
               {/* Recent Orders */}

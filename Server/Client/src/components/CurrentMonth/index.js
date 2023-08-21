@@ -121,7 +121,7 @@ export default function Dashboard() {
               sx={{ flexGrow: 1 }}
               
             >
-              PROFILE<IconButton onClick={toggleDrawer} color='#fff'
+             HISTORY<IconButton onClick={toggleDrawer} color='#fff'
               >
               {/* <ChevronLeftIcon /> */}
             </IconButton>
@@ -168,20 +168,15 @@ export default function Dashboard() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={120} lg={250}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 800,
-                  }}
-                >
-                  {/* <Chart /> */}
-                  <Deposits />
+             
+              {/* Recent Deposits */}
+            
+              {/* Recent Orders */}
+              <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Orders />
                 </Paper>
               </Grid>
-              
             </Grid>
             {/* <Copyright sx={{ pt: 4 }} /> */}
           </Container>

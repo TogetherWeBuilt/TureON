@@ -10,16 +10,16 @@ function preventDefault(event) {
 export default function Deposits() {
   return (
     <React.Fragment>
-      <Title>Project no.</Title>
+      <Title>TureON User Profile</Title>
       <Typography component="p" variant="h4">
-        Strings ending with "1"
+        Ashithosh Kumar
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-        16 August, 2023
+        15 March, 2023
       </Typography>
       <div>
         <Link color="#01bf71" href="#" onClick={preventDefault}>
-          open
+          Update Profile
         </Link>
       </div>
     </React.Fragment>

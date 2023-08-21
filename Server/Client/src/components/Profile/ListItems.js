@@ -52,7 +52,7 @@ export const secondaryListItems = (
     <ListSubheader component="div" inset>
       HISTORY
     </ListSubheader>
-    <ListItemButton component={Link} to="/cm">
+    <ListItemButton  component={Link} to="/cm">
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>

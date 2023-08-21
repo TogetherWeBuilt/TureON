@@ -6,7 +6,7 @@ const Home = () => {
     <>
      <Container>
         <FormWrap>
-         <Icon to="/"> TureON</Icon>
+         <Icon to="/home"> TureON</Icon>
          <BuildH1>BUILD PROJECTS</BuildH1>
         </FormWrap>
      </Container>

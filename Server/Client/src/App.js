@@ -5,11 +5,11 @@ import SigninPage from './pages/signin';
 import SignUpPage from './pages/signup';
 import HomePage from './pages/home';
 import ProfilePage from './pages/profile';
-// import BuildPage from './pages/build';
+import BuildPage from './pages/build';
 import Home from './pages';
 import MyProjectPage from './pages/myprojects';
 import SavedProjectPage from './pages/savedprojects';
-
+import CurrentMonthPage from './pages/currentmonth';
 function App() {
   return (
 
@@ -20,9 +20,9 @@ function App() {
         <Route path='/signup' element={<SignUpPage/>} />
         <Route path='/home' element={<HomePage/>} />
         <Route path='/profile' element={<ProfilePage/>} />
-        {/* <Route path='/build' element={<BuildPage/>} /> */}
-        <Route path='/myproject' element={<MyProjectPage/>} 
-        />
+        <Route path='/build' element={<BuildPage/>} />
+        <Route path='/myproject' element={<MyProjectPage/>} />
+        <Route path='/cm' element={<CurrentMonthPage/>} />
         <Route path='/savedproject' element={<SavedProjectPage/>} />
       </Switch>
     </Router>
